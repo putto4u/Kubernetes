@@ -6,7 +6,7 @@
 2. VM(가상머신) 생성 - 서버네임 : puttoSVR01
 3. VM에 Ubuntu 리눅스 설치
 4. $ sudo apt update
-5. $ sudo apt install net-tools       #네트워크 명령어들
+5. $ sudo apt install net-tools       #네트워크 명령어 패키지 설치
 6. $ sudo apt install ca-certificates curl  gnupg  lsb-release
       > ca_certificates : 인증서관련패키지  
       > curl : (웹)파일 다운로드 패키지  
@@ -18,7 +18,7 @@
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-10. 
+10. $sudo apt update
 11. :
 12. Python, Pyenv 설치
 13. :
