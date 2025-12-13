@@ -8,9 +8,9 @@
 4. $ sudo apt update
 5. $ sudo apt install net-tools       #네트워크 명령어들
 6. $ sudo apt install ca-certificates curl  gnupg  lsb-release
-      > ca_certificates : 인증서관련패키지
-      > curl : (웹)파일 다운로드 패키지
-      > gnupg : 디지털 서명 패키지
+      > ca_certificates : 인증서관련패키지  
+      > curl : (웹)파일 다운로드 패키지  
+      > gnupg : 디지털 서명 패키지  
       > lsb-release : 리눅스 배포판 식별 패키지
 7. $ sudo mkdir -m 0755 -p /etc/apt/keyrings     # GPG(GNU Privacy Guard) 키를 사용합니다. 이 키들을 모아두는 저장소
 8. 
