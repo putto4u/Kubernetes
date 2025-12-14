@@ -27,7 +27,7 @@
    ```
 10. 도커설치
     ```
-    $ sudo apt update
+    $ sudo apt update    ## 필수 실행. 실제업데이트(upgrade)가 아님! 업데이트 버전, 다운로드 url, 목록 정보 등을 업데이트 하는 것임. 
     $ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
     ```
