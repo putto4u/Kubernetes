@@ -88,6 +88,8 @@
 
     $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
     $ which pyenv   # 설치 확인
+    /home/유저홈/.pyenv/bin/pyenv
+
 
     
 ## 11. Python 설치
