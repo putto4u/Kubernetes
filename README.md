@@ -14,7 +14,7 @@
       > lsb-release : 리눅스 배포판 식별 패키지
       > build-essential : 소프트웨어를 소스코드로부터 직접 컴파일하고 빌드하는 라이브러리 메타 패키지
 
-7. ``` $ sudo systemctl enable ssh && sudo systemctl start ssh  # 서버 부팅시 ssh 자동 시작, 서버 지금 시작
+7. ``` $ sudo systemctl enable ssh && sudo systemctl start ssh  # 서버 부팅시 ssh 자동 시작, 서버 지금 시작  
        $ systemctl list-units --type=service --state=running ```
 
 
