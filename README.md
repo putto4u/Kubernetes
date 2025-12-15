@@ -13,10 +13,10 @@
     ```  
 
 5.  ```bash
-       $ sudo apt install net-tools       # ifconfig 등 네트워크 명령어 패키지 설치
+    $ sudo apt install net-tools       # ifconfig 등 네트워크 명령어 패키지 설치
     ```
 7.  ```bash
-       $ sudo apt install  ca-certificates curl  gnupg  lsb-release  build_essential
+    $ sudo apt install  ca-certificates curl  gnupg  lsb-release  build_essential
     ```  
         > ca_certificates : 인증서관련패키지  
         > curl : (웹)파일 다운로드 패키지  
