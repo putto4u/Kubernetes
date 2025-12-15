@@ -83,6 +83,7 @@
      #변경 사항 적용
      ```
      $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
+      $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
      ```
     
 
