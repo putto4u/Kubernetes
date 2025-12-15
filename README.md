@@ -7,21 +7,21 @@
 3. VM에 Ubuntu 리눅스 설치
 4. ``` $ sudo apt update  ```  
 5. ``` $ sudo apt install net-tools       #네트워크 명령어 패키지 설치  ```  
-6. ``` $ sudo apt install -y ssh ca-certificates curl  gnupg  lsb-release  build_essential ```  
-      > ssh : 
+6. ``` $ sudo apt install  ca-certificates curl  gnupg  lsb-release  build_essential ```  
       > ca_certificates : 인증서관련패키지  
       > curl : (웹)파일 다운로드 패키지  
       > gnupg : 디지털 서명 패키지  
       > lsb-release : 리눅스 배포판 식별 패키지
       > build-essential : 소프트웨어를 소스코드로부터 직접 컴파일하고 빌드하는 라이브러리 메타 패키지
 
-7. GPG 키 추가
+7. ``` $ sudo systemctl enable ssh && sudo systemctl start ssh  # 서버 부팅시 ssh 자동 시작, 서버 지금 시작 ```
+8. GPG 키 추가
    ```
    $ sudo mkdir -m 0755 -p /etc/apt/keyrings     # GPG(GNU Privacy Guard) 키를 사용합니다. 이 키들을 모아두는 저장소
    $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg  # GPG키 다운로드 및 추가
    ```
    
-8. 도커 리포지토리 설정
+9. 도커 리포지토리 설정
    ```
    $ echo \
      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
