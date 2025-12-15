@@ -95,7 +95,9 @@
 
 
     
-## 11. Python 설치
+## 11. Python 설치 ( pyenv로 설치하도록 한다!!)
+   $ pyenv install 3.12.6
+   
 12. dfㄴㅇㄹ
 13. fgㅇㄴㄹ
 14. ㄴㅇㄹ
