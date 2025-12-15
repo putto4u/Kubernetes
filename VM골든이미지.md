@@ -24,8 +24,8 @@
 | --- | --- | --- |
 | **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | `$ sudo apt update && sudo apt upgrade -y` |
 | **기본 도구 설치** | `vim`, `curl`, `wget`, `build-essential` 등 필수 도구 | `$ sudo apt install -y vim curl wget build-essential` |
-| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-server   $ sudo systemctl enable ssh && sudo systemctl start ssh` |
-| **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git   $ git config --global user.name "Your Name"   $ git config --global user.email "your.email@example.com"` |
+| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-server <br> $ sudo systemctl enable ssh && sudo systemctl start ssh` |
+| **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git <br> $ git config --global user.name "Your Name"   $ git config --global user.email "your.email@example.com"` |
 | **Guest Additions** | 호스트-게스트 간 기능 활성화 | *버추얼박스 메뉴에서 `장치` > `Guest Additions CD 이미지 삽입` 후 VM 내부에서 설치* |
 
 ####2단계: 운영체제 기본 보안 강화 (클러스터 준비)골든 이미지에 UFW를 설정할 때는 향후 쿠버네티스 클러스터 구축에 필요한 포트를 미리 개방하여 확장성을 확보합니다.
