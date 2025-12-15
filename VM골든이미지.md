@@ -24,7 +24,7 @@
 | --- | --- | --- |
 | **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | `$ sudo apt update && sudo apt upgrade -y` |
 | **기본 도구 설치** | `vim`, `curl`, `wget`, `build-essential` 등 필수 도구 | `$ sudo apt install -y vim curl wget build-essential` |
-| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-server` <br> `$ sudo systemctl enable ssh && sudo systemctl start ssh` |
+| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-server` <br> `$ sudo systemctl enable ssh && sudo systemctl start ssh` <br> enable : 서버 자동 시작 설정 |
 | **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git` <br> `$ git config --global user.name "Your Name" ` <br>  `$ git config --global user.email "your.email@example.com"` |
 | **Guest Additions** | 호스트-게스트 간 기능 활성화 | *버추얼박스 메뉴에서 `장치` > `Guest Additions CD 이미지 삽입` 후 VM 내부에서 설치* |
 
