@@ -48,8 +48,7 @@ $ sudo ufw allow 30000:32767/tcp # NodePort 범위` |
 | :--- | :--- | :--- |
 | **yq & jq** | 설정 파일 파싱 및 수정 유틸리티 | `bash\n$ sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64\n$ sudo chmod a+x /usr/local/bin/yq\n$ sudo apt install -y jq\n` |
 2. **pyenv 빌드 의존성 설치:**
-```bash
-$ sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev\n
+```$ sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev\n
 
 ```
 
