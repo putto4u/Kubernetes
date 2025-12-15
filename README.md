@@ -52,28 +52,28 @@
 
 ## 10. pyenv 설치(Python 설치 전 작업)
     * 사전 설치 패키지들
-    ```bash
+
     $ sudo apt update
     $ sudo apt install -y build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-    ```
+
 
     * pyenv 설치
-    ```bash
+
     $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     # 또는 
     $ curl https://pyenv.run | bash   # git을 사용할 수도 있지만 git을 사용하고 싶지 않을 경우 사용한다.
-    ```
+
 
     * ~/.bashrc 파일의 맨 끝에 추가    
-    ```bash 
+
     $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
     $ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
     $ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-    ```
+
     * 또는
-    ```bash
+
     $ vim .bashrc    # .bashrc 파일을 열어 맨 마지막에 아래 세 줄을 추가한다.
       #명령 모드 'G' -> 'o':   G - 마지막줄 이동  o - 다음 줄에 입력시작
       #또는, 명령모드에서 ':set mouse=a'(ex모드) 를 입력하면 마우스로 커서를 이동할 수 있음.
@@ -82,15 +82,15 @@
       export PATH="$PYENV_ROOT/bin:$PATH"
       eval "$(pyenv init -)"
      :wq!   # 저장 후 종료
-    ```
+
 
     * 변경 사항 적용
-    ```bash
+
     $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
-    ```
-    ```bash
+
+
     $ which pyenv   # 설치 확인
-    ```
+
     
 ### 11. Python 설치
 12. df
