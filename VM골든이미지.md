@@ -36,10 +36,9 @@
 \n $ sudo ufw default deny incoming` |
 | **SSH 포트 허용** | 원격 관리(22번) 포트 허용 | `bash\n$ sudo ufw allow 22/tcp` |
 | **쿠버네티스 포트 사전 허용** | 향후 클러스터 통신을 위한 필수 포트 개방 | `bash\n# Control Plane (Master/Manager) 포트
-$ sudo ufw allow 6443/tcp # K8s API 서버\n
-$ sudo ufw allow 2379:2380/tcp # etcd 서버\n
-$ sudo ufw allow 10259/tcp # Scheduler
-# Worker Node 포트\
+$ sudo ufw allow 6443/tcp # K8s API 서버
+$ sudo ufw allow 2379:2380/tcp # etcd 서버
+$ sudo ufw allow 10259/tcp # Scheduler # Worker Node 포트
 $ sudo ufw allow 10250/tcp # Kubelet API
 $ sudo ufw allow 30000:32767/tcp # NodePort 범위` |
 | **방화벽 활성화** | 규칙 적용 | `bash\n$ sudo ufw enable\n$ sudo ufw status` |
