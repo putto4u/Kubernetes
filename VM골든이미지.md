@@ -22,7 +22,7 @@
 
 | 항목 | 목적 | 명령어 (Ubuntu 22.04 LTS 기준) |
 | --- | --- | --- |
-| **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | `$ sudo apt update && sudo apt upgrade -y` |
+| **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | '$ sudo apt update && sudo apt upgrade -y' |
 | **기본 도구 설치** | `vim`, `curl`, `wget`, `build-essential` 등 필수 도구 | `$ sudo apt install -y vim curl wget build-essential` |
 | **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-serve`r <br> `$ sudo systemctl enable ssh && sudo systemctl start ssh` |
 | **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git` <br> `$ git config --global user.name "Your Name"   $ git config --global user.email "your.email@example.com"` |
