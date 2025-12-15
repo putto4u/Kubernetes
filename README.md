@@ -75,7 +75,7 @@
     * 또는
     ```bash
     $ vim .bashrc    # .bashrc 파일을 열어 맨 마지막에 아래 세 줄을 추가한다.
-      :
+      #명령 모드 'G' -> 'o':   G - 마지막줄 이동  o - 다음 줄에 입력시작
       export PYENV_ROOT="$HOME/.pyenv"
       export PATH="$PYENV_ROOT/bin:$PATH"
       eval "$(pyenv init -)"
