@@ -22,10 +22,10 @@
 
 | 항목 | 목적 | 명령어 (Ubuntu 22.04 LTS 기준) |
 | --- | --- | --- |
-| **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | '$ sudo apt update && sudo apt upgrade -y' |
+| **시스템 업데이트** | 최신 패키지 리스트 및 시스템 업데이트 | `$ sudo apt update && sudo apt upgrade -y` |
 | **기본 도구 설치** | `vim`, `curl`, `wget`, `build-essential` 등 필수 도구 | `$ sudo apt install -y vim curl wget build-essential` |
-| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-serve`r <br> `$ sudo systemctl enable ssh && sudo systemctl start ssh` |
-| **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git` <br> `$ git config --global user.name "Your Name"   $ git config --global user.email "your.email@example.com"` |
+| **SSH 서버 설치/가동** | 원격 접속 환경 마련 | `$ sudo apt install -y openssh-servr` <br> `$ sudo systemctl enable ssh && sudo systemctl start ssh` |
+| **`git` 설치 및 기본 설정** | 버전 관리 도구 및 사용자 정보 설정 | `$ sudo apt install -y git` <br> `$ git config --global user.name "Your Name" ` <br>  `$ git config --global user.email "your.email@example.com"` |
 | **Guest Additions** | 호스트-게스트 간 기능 활성화 | *버추얼박스 메뉴에서 `장치` > `Guest Additions CD 이미지 삽입` 후 VM 내부에서 설치* |
 
 ####2단계: 운영체제 기본 보안 강화 (클러스터 준비)골든 이미지에 UFW를 설정할 때는 향후 쿠버네티스 클러스터 구축에 필요한 포트를 미리 개방하여 확장성을 확보합니다.
@@ -34,14 +34,14 @@
 | --- | --- | --- |
 | **방화벽 기본 정책** | 나가는 트래픽 허용, 들어오는 트래픽 기본 차단 | `bash$ sudo ufw default allow outgoing`   <br> `$ sudo ufw default deny incoming` |
 | **SSH 포트 허용** | 원격 관리(22번) 포트 허용 | `$ sudo ufw allow 22/tcp` |
-| **쿠버네티스 포트 사전 허용** | 향후 클러스터 통신을 위한 필수 포트 개방 | `$  # Control Plane (Master/Manager) 포트   $ sudo ufw allow 6443/tcp # K8s API 서버   $ sudo ufw allow 2379:2380/tcp # etcd 서버   $ sudo ufw allow 10259/tcp # Scheduler # Worker Node 포트  $ sudo ufw allow 10250/tcp # Kubelet API   $ sudo ufw allow 30000:32767/tcp # NodePort 범위` |
-| **방화벽 활성화** | 규칙 적용 | `$ sudo ufw enable   $ sudo ufw status` |
+| **쿠버네티스 포트 사전 허용** | 향후 클러스터 통신을 위한 필수 포트 개방 | `$  # Control Plane (Master/Manager) 포트 `  <br> `$ sudo ufw allow 6443/tcp # K8s API 서버 `  <br> `$ sudo ufw allow 2379:2380/tcp # etcd 서버 `  <br> `$ sudo ufw allow 10259/tcp # Scheduler # Worker Node 포트`  <br> `$ sudo ufw allow 10250/tcp # Kubelet API `  <br> `$ sudo ufw allow 30000:32767/tcp # NodePort 범위` |
+| **방화벽 활성화** | 규칙 적용 | `$ sudo ufw enable `  <br> `$ sudo ufw status` |
 | **패스워드 정책 강화** | 사용자 패스워드 복잡도 및 주기 설정 | * `/etc/login.defs` 및 `/etc/pam.d/common-password` 파일 수정하여 설정 (매뉴얼 수정 권장)* |
 
 ####3단계: YAML/JSON 도구 및 pyenv 설치 준비1. **YAML/JSON 도구 설치:**
 | 도구 | 목적 | 명령어 |
 | :--- | :--- | :--- |
-| **yq & jq** | 설정 파일 파싱 및 수정 유틸리티 | `$ sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64   $ sudo chmod a+x /usr/local/bin/yq   $ sudo apt install -y jq   ` |
+| **yq & jq** | 설정 파일 파싱 및 수정 유틸리티 | `$ sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 `  <br> `$ sudo chmod a+x /usr/local/bin/yq `  <br> `$ sudo apt install -y jq   ` |
 2. **pyenv 빌드 의존성 설치:**
 ```$ sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev   
 
@@ -114,11 +114,13 @@ $ sudo systemctl restart docker
 
 ---
 
-###III. 🛑 복제 전에 반드시 해야 할 시스템 초기화 (Critical)| 작업 항목 | 목적 | 명령어 |
+###III. 🛑 복제 전에 반드시 해야 할 시스템 초기화 (Critical)
+
+| 작업 항목 | 목적 | 명령어 |
 | --- | --- | --- |
 | **VM 네트워크 설정** | **DHCP 유지** | VM 네트워크는 **DHCP**로 설정하여 복제 후 고유 IP를 할당받도록 합니다. **고정 IP 설정은 복제 후** VM 역할(마스터/워커)에 따라 진행합니다. |
 | **네트워크 설정 초기화** | 고유 설정 제거 | *OS 설정 파일(예: `/etc/netplan` 또는 `/etc/network/interfaces`)을 검토하여 **MAC 주소나 고정 IP 설정이 남아있지 않도록** DHCP로 되돌려야 합니다.* |
-| **로그 및 캐시 정리** | 이미지 용량 최적화 및 불필요한 데이터 제거 | `$ sudo apt clean   $ sudo apt autoremove -y   $ sudo rm -rf /var/log/* /tmp/*   ` |
+| **로그 및 캐시 정리** | 이미지 용량 최적화 및 불필요한 데이터 제거 | `$ sudo apt clean `  <br> `$ sudo apt autoremove -y `  <br> `$ sudo rm -rf /var/log/* /tmp/*   ` |
 | **쉘 히스토리 제거** | 이전 작업 기록 삭제 | `$ history -c && exit   ` |
 
 VM을 종료하고 복제하면, **보안 강화, 도구 준비, 그리고 클라우드 환경과의 호환성**까지 모두 갖춘 완벽한 골든 이미지를 확보할 수 있습니다.
