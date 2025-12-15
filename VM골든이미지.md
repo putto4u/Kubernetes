@@ -32,8 +32,8 @@
 
 | 항목 | 목적 | 명령어 (Ubuntu UFW 기준) |
 | --- | --- | --- |
-| **방화벽 기본 정책** | 나가는 트래픽 허용, 들어오는 트래픽 기본 차단 | `bash\n$ sudo ufw default allow outgoing
-\n $ sudo ufw default deny incoming` |
+| **방화벽 기본 정책** | 나가는 트래픽 허용, 들어오는 트래픽 기본 차단 | `bash$ sudo ufw default allow outgoing
+<br> $ sudo ufw default deny incoming` |
 | **SSH 포트 허용** | 원격 관리(22번) 포트 허용 | `bash\n$ sudo ufw allow 22/tcp` |
 | **쿠버네티스 포트 사전 허용** | 향후 클러스터 통신을 위한 필수 포트 개방 | `bash\n# Control Plane (Master/Manager) 포트
 $ sudo ufw allow 6443/tcp # K8s API 서버
