@@ -74,7 +74,7 @@
     ```
     * 또는
     ```bash
-    $ vim .bashrc # .bashrc 파일을 열어 맨 마지막에 아래 세 줄을 추가한다.
+    $ vim .bashrc    # .bashrc 파일을 열어 맨 마지막에 아래 세 줄을 추가한다.
       :
       export PYENV_ROOT="$HOME/.pyenv"
       export PATH="$PYENV_ROOT/bin:$PATH"
@@ -82,12 +82,14 @@
      :wq!   # 저장 후 종료
     ```
 
-   * 변경 사항 적용
-   ```bash
-   $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
-   ```
-  
-
+    * 변경 사항 적용
+    ```bash
+    $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
+    ```
+    ```bash
+    $ which pyenv   # 설치 확인
+    ```
+    
 11. Python 설치
 12. df
 13. fg
