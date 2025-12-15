@@ -85,10 +85,13 @@
 
 
     ## 변경 사항 적용
+    $ source ~/.bashrc  # 쉘 재시작,  .bashrc를 새로 적용
+    # 또는
+    $ exec $SHELL
 
-    $ source ~/.bashrc  # 추가된 .bashrc를 새로 적용
-    $ which pyenv   # 설치 확인
-    /home/유저홈/.pyenv/bin/pyenv
+    ## 설치 확인
+    $ pyenv   # 설치 확인
+    :  # 버전 및 명령어 리스트 출력
 
 
     
