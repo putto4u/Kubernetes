@@ -50,7 +50,7 @@
     ```
     
 
-10. pyenv 설치(Python 설치 전 작업)
+# 10. pyenv 설치(Python 설치 전 작업)
     * 사전 설치 패키지들
     ```bash
     $ sudo apt update
@@ -90,7 +90,7 @@
     $ which pyenv   # 설치 확인
     ```
     
-11. Python 설치
+# 11. Python 설치
 12. df
 13. fg
 14. ㄴㅇㄹ
