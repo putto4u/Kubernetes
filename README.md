@@ -121,7 +121,7 @@
    $ pyenv versions  #또는 python --version   ## 설치 확인, 버전출력
    ## 안나오면
    $ pyenv global 3.12.12     ## 사용자의 모든 환경에서 3.12.12를 사용하도록 설정됨
-   $ pyenv versions  #또는 python --version $ 
+   $ pyenv versions  #또는 python --version  ## 버전 출력
    ```
 12. dfㄴㅇㄹ
 13. fgㅇㄴㄹ
