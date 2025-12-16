@@ -1,7 +1,7 @@
 # Kubernetes (K8S)
 
 
-## 사전 준비
+## 사전 준비 - 골든 이미지를 완성하고 vm을 복제한 후 쿠버네티스 설치에 들어가기 위한 사전 단계
 1. Oracle VirtualBox 설치(슈퍼바이저)
 2. VM(가상머신) 생성 - 서버네임 : puttoSVR01
 3. VM에 Ubuntu 리눅스 설치
