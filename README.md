@@ -105,6 +105,7 @@
      libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
      libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
    $ pyenv install 3.12.12  # pyenv로 apt가 설치할 수 없는 버전도 설치할 수 있으며, 여러 환경에서 설치할 때마다 다른 버전을 설치하고 사용시마다 변경,관리할 수 있습니다.
+   ## 성공시 4줄 정도의 짧은 버전 정보가 나옴, 오류 발생시 긴 문장 출력
 
    ## 오류 발생 시
    # pyenv cache 정리 (선택 사항이지만 권장)
@@ -116,8 +117,12 @@
    # Python 3.12.12 설치 재시도
    $ pyenv install 3.12.12
    ```
-   
-   
+   ```bash
+   $ pyenv versions  #또는 python --version   ## 설치 확인, 버전출력
+   ## 안나오면
+   $ pyenv global 3.12.12     ## 사용자의 모든 환경에서 3.12.12를 사용하도록 설정됨
+   $ pyenv versions  #또는 python --version $ 
+   ```
 12. dfㄴㅇㄹ
 13. fgㅇㄴㄹ
 14. ㄴㅇㄹ
