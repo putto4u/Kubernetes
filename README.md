@@ -96,12 +96,23 @@
 
     
 ## 11. Python 설치 ( pyenv로 설치하도록 한다!!)
+   ```bash
    $ /usr/bin/python3 --version   # 시스템파이썬 버전 확인 -> 3.12.3
    $ apt show python3    # apt install python3 이라 명령시 설치될 최신 배포 버전을 알려줌. 하지만 반드시 pyenv로 설치하도록 합니다.
 
    $ sudo apt update
    $ pyenv install 3.12.12  # pyenv로 apt가 설치할 수 없는 버전도 설치할 수 있으며, 여러 환경에서 설치할 때마다 다른 버전을 설치하고 사용시마다 변경,관리할 수 있습니다.
-   
+
+   ## 오류 발생 시
+   # pyenv cache 정리 (선택 사항이지만 권장)
+   $ rm -rf ~/.pyenv/cache
+
+   # pyenv 빌드 환경 변수 초기화 (필요하다면)
+   $ unset LDFLAGS CFLAGS
+
+   # Python 3.12.12 설치 재시도
+   $ pyenv install 3.12.12
+   ```
    
    
 12. dfㄴㅇㄹ
