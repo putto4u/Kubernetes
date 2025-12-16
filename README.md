@@ -95,7 +95,7 @@
 
 
     
-## 11. Python 설치 ( pyenv로 설치하도록 한다!!)
+## 11. Python 설치 ( 반드시 pyenv로 설치!!)
    ```bash
    $ /usr/bin/python3 --version   # 시스템파이썬 버전 확인 -> 3.12.3
    $ apt show python3    # apt install python3 이라 명령시 설치될 최신 배포 버전을 알려줌. 하지만 반드시 pyenv로 설치하도록 합니다.
