@@ -101,6 +101,9 @@
    $ apt show python3    # apt install python3 이라 명령시 설치될 최신 배포 버전을 알려줌. 하지만 반드시 pyenv로 설치하도록 합니다.
 
    $ sudo apt update
+   $ sudo apt install -y build-essential libssl-dev zlib1g-dev \    ## 앞서 설치 했다면 생략, 제대로 설치가 안되어 있으면 파이썬 설치시 오류 발생. 
+     libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
    $ pyenv install 3.12.12  # pyenv로 apt가 설치할 수 없는 버전도 설치할 수 있으며, 여러 환경에서 설치할 때마다 다른 버전을 설치하고 사용시마다 변경,관리할 수 있습니다.
 
    ## 오류 발생 시
