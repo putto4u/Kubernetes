@@ -48,7 +48,25 @@
     $ sudo apt update    ## 필수 실행. 실제업데이트(upgrade)가 아님! 업데이트 버전, 다운로드 url, 목록 정보 등을 업데이트 하는 것임. 
     $ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
-    
+    Docker 자동완성 설정
+
+    최신 버전의 Docker는 쉘 종류에 맞는 자동완성 스크립트를 생성하는 명령어를 내장하고 있습니다.
+   
+    1. `bash-completion` 패키지가 필요합니다.
+       ```bash
+       sudo apt install bash-completion -y
+       apt list --installed | grep bash-completion
+       ```
+       
+     2. 자동완성 스크립트를 등록합니다.
+        ```bash
+        # 스크립트 생성 및 적용
+        mkdir -p ~/.local/share/bash-completion/completions
+        docker completion bash > ~/.local/share/bash-completion/completions/docker
+
+        # 바로 적용
+        source ~/.bashrc
+        ```
 
 ## 10. pyenv 설치(Python 설치 전 작업)
     ## 사전 설치 패키지들
